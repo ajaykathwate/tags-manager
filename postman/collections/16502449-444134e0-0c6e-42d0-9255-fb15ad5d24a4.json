@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "16502449-444134e0-0c6e-42d0-9255-fb15ad5d24a4",
+		"name": "Tagify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"id": "16502449-dffa3b3c-e7bf-4712-85ab-299636148ff9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ajay\",\n  \"email\": \"ajay@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}/api/users",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"id": "16502449-493443c5-8f0c-4c6b-ae1b-522574ca23d8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ajay\",\n  \"email\": \"ajay@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{server_url}}/api/users",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User By ID",
+			"id": "16502449-f7a3f4a4-355c-41e1-bc45-747bfc80c7a4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ajay\",\n  \"email\": \"ajay@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{server_url}}/api/users/defc5481-d294-4ab3-92c9-da0bd0283cec",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"defc5481-d294-4ab3-92c9-da0bd0283cec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Tag To User",
+			"id": "16502449-3904862c-04d6-4d18-a68a-7b54fb2aa954",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ajay\",\n  \"email\": \"ajay@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{server_url}}/api/users/defc5481-d294-4ab3-92c9-da0bd0283cec/tags/Java",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"defc5481-d294-4ab3-92c9-da0bd0283cec",
+						"tags",
+						"Java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Tag from User",
+			"id": "16502449-129c6ea7-ea46-4f3b-9dd7-978e9a64c6ac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}/api/users/defc5481-d294-4ab3-92c9-da0bd0283cec/tags/Java",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"defc5481-d294-4ab3-92c9-da0bd0283cec",
+						"tags",
+						"Java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tags for User",
+			"id": "16502449-879fbaa1-77ba-4c65-8794-7a55d6ef73ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}/api/users/defc5481-d294-4ab3-92c9-da0bd0283cec/tags",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"defc5481-d294-4ab3-92c9-da0bd0283cec",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Tags Available in System",
+			"id": "16502449-2e9c18b3-2658-47a9-b558-1031c83ec8de",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}/api/tags",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
