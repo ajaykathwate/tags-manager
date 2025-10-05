@@ -1,0 +1,56 @@
+
+#
+# Server Properties
+#
+server:
+  port: ${SERVER_PORT}
+  tomcat:
+    accept-count: 100            # Keep or adjust based on load
+    max-connections: 8192        # Max sockets Tomcat will accept (default: 8192)
+    threads:
+      max: 200                   # Max worker threads (default: 200)
+      min-spare: 10              # Min threads kept alive (default: 10)
+    connection-timeout: 5000
+
+#
+# Spring Properties
+#
+spring:
+  application:
+    name: ${SERVICE_NAME}
+
+  #
+  # Database Properties
+  #
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: "${DB_USERNAME}"
+    password: "${DB_PASSWORD}"
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc.batch_size: 30
+        order_inserts: true
+        order_updates: true
+        generate_statistics: false
+        format_sql: true
+
+#
+# Logging Properties
+#
+logging:
+  level:
+    root: info
+    org.hibernate.SQL: debug
+    com.finemeet.user-service: debug
