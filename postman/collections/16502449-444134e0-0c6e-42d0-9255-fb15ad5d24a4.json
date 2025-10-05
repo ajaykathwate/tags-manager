@@ -103,7 +103,7 @@
 					"raw": "{\n  \"username\": \"Ajay\",\n  \"email\": \"ajay@example.com\"\n}"
 				},
 				"url": {
-					"raw": "{{server_url}}/api/users/defc5481-d294-4ab3-92c9-da0bd0283cec/tags/Java",
+					"raw": "{{server_url}}/api/users/defc5481-d294-4ab3-92c9-da0bd0283cec/tags/TypeScript",
 					"host": [
 						"{{server_url}}"
 					],
@@ -112,7 +112,7 @@
 						"users",
 						"defc5481-d294-4ab3-92c9-da0bd0283cec",
 						"tags",
-						"Java"
+						"TypeScript"
 					]
 				}
 			},
